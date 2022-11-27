@@ -6,7 +6,7 @@ class RestaurantPizza < ApplicationRecord
     validates :price
 
     def price
-        if price < 30 || price < 0
+        if price > 30 || price < 0
             errors.add(:"must be between 0 and 30")
         end    
     end    
